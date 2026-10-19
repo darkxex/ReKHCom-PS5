@@ -16,9 +16,9 @@ enum UpdateState
     UPDATE_FAILED,    /* update_message() says why */
 };
 
-/* Project releases are tagged vX.Y.Z and carry PPSA98511.zip (the app folder PPSA98511/ inside). */
-#define UPDATE_REPO "MatyMeatBoy/ReKHCoM"
-#define UPDATE_TAG_PREFIX "v"
+/* PS5 releases are tagged ps5-vX.Y.Z and carry PPSA98511.zip (the app folder PPSA98511/ inside). */
+#define UPDATE_REPO "darkxex/ReKHCom-PS5"
+#define UPDATE_TAG_PREFIX "ps5-v"
 
 /* log: where the messages go (printf-like), may be NULL. */
 void update_init(void (*log)(const char *fmt, ...));
