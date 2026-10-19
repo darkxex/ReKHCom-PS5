@@ -97,6 +97,8 @@ def quiver(names):
 if not args.post:
     launcher = re.search(r'REKHCOM_VERSION\s+"([^"]+)"', (ROOT / 'port/decompui/decompui.cpp').read_text()).group(1)
     check(launcher == V, f'launcher version {launcher}')
+    rc = re.search(r'REKHCOM_RC_VERSION_TEXT\s+"([^"]+)"', (ROOT / 'port/decompui/rekhcom.rc').read_text()).group(1)
+    check('v' + rc == V, f'executable file details (rekhcom.rc) {rc}')
     web = (ROOT / 'port/web/index.html').read_text(encoding='utf-8')
     check(f'Web v{V[1:]}' in web or f'WEB {V}' in web, 'web page label')
     top = re.search(r'^## (v[\d.]+)', (ROOT / 'CHANGELOG.md').read_text(encoding='utf-8'), re.M).group(1)

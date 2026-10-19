@@ -1,2 +1,35 @@
 // Icon of the launcher and the game executables (ID 1: SDL and Explorer use it).
 1 ICON "rekhcom.ico"
+
+// File details shown by Explorer and read by antivirus heuristics: an unsigned
+// executable without them looks anonymous. Bump with REKHCOM_VERSION
+// (release_check.py compares them).
+#define REKHCOM_RC_VERSION 1,9,9,0
+#define REKHCOM_RC_VERSION_TEXT "1.9.9"
+
+1 VERSIONINFO
+FILEVERSION REKHCOM_RC_VERSION
+PRODUCTVERSION REKHCOM_RC_VERSION
+FILEOS 0x40004
+FILETYPE 0x1
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904B0"
+        BEGIN
+            VALUE "CompanyName", "ReKHCoM project (MatyMeatBoy)"
+            VALUE "FileDescription", "ReKHCoM - native PC port of Kingdom Hearts: Chain of Memories (GBA); needs your own cartridge dump"
+            VALUE "FileVersion", REKHCOM_RC_VERSION_TEXT
+            VALUE "InternalName", "ReKHCoM"
+            VALUE "LegalCopyright", "Fan-made decompilation port. Kingdom Hearts is a trademark of Disney and Square Enix. No game data included."
+            VALUE "OriginalFilename", "ReKHCoM.exe"
+            VALUE "ProductName", "ReKHCoM"
+            VALUE "ProductVersion", REKHCOM_RC_VERSION_TEXT
+            VALUE "Comments", "https://github.com/MatyMeatBoy/ReKHCoM"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
