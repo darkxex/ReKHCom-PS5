@@ -17,7 +17,7 @@
 #define ReKHCoM_NAME "ReKHCoM"           /* identifiers: the User-Agent of network requests, the Vulkan application name */
 #define ReKHCoM_TITLE "ReKHCoM" /* what is shown on screen */
 #define ReKHCoM_TITLE_ID "PPSA98511"
-#define ReKHCoM_VERSION "1.0.5" /* project release version; contentVersion follows it */
+#define ReKHCoM_VERSION "1.0.6" /* project release version; contentVersion follows it */
 #define ReKHCoM_PATH_MAX 512
 
 /* Pad bits use RetroPad numbering so the host can hand the mask to the core
